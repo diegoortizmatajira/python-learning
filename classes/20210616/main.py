@@ -58,8 +58,11 @@ def practice_3_8():
     print("Original List", places)
     print("Sorted List", sorted_places)
     print("- - REVERSING A COPY - -")
-    reversed_places = reversed(places)
+    reversed_places_iterator = reversed(places)
     print("Original List", places)
+    reversed_places = []
+    for place in reversed_places_iterator:
+        reversed_places.append(place)
     print("Reversed List", reversed_places)
     print("- - SORTING THE SAME LIST - -")
     places.sort()
@@ -74,6 +77,48 @@ def practice_3_9():
     print("The len() function was used on every step of the exercise from 3.4 to 3.7")
 
 
+def practice_3_10():
+    print("=========================\nPractice 3.10\n-------------------------")
+    task1 = "wake up"
+    task2 = "breakfast"
+    task3 = "study"
+    task4 = "lunch"
+    task5 = "work"
+    task6 = "dinner"
+    task7 = "sleep"
+    my_list = [task1, task2, task3, task4, task5, task6, task7]
+    my_orderedlist = [task1, task2, task3, task4, task5, task6, task7]
+    my_orderedlist.sort()
+    print("My list in alphabetical order (Not useful):", my_orderedlist)
+    print("My list:", my_list)
+    # Gets the position of the lunch
+    i = my_list.index(task4)
+    # Inserts the meeting after lunch
+    print("- Adding a meeting after lunch")
+    my_list.insert(i + 1, "meeting after lunch")
+    print("My list:", my_list)
+
+    # Too much work, no sleep today
+    print("- Too much work, no sleep today")
+    print("- But at least try to sleep a few hours")
+    my_list.remove(task7)
+    my_list.append(task5)
+    my_list.append("doze")
+    print("My list:", my_list)
+    print("- There are", len(my_list), "tasks in the list")
+    print("- The task '" + task5 + "' is ", my_list.count(task5), "times")
+    print("- Marking the tasks as completed and removing them from the list")
+    for i in range(0, len(my_list) - 2):
+        print("   - Doing the task:", my_list.pop(0), "[COMPLETED]")
+    print("My list:", my_list)
+    print("- Too tired, need a small break, change the order of the two last tasks")
+    my_list.reverse()
+    print("My list:", my_list)
+    print("- At the end all remaining tasks are removed")
+    my_list.clear()
+    print("My list:", my_list)
+
+
 def practice_dictionaries():
     print("=========================\nPractice Dictionaries\n-------------------------")
     courses = {
@@ -83,6 +128,15 @@ def practice_dictionaries():
         "Professional Communication": "Mac Kite",
         "Data Science and Machine Learning In Canada": "Mohammad Islam",
     }
+    print("\n**** Original teachers:\n")
+    for item in courses:
+        print("Course name: ", item)
+        print("Course teacher: ", courses[item])
+        print("- - - - -")
+
+    courses["Artificial Intelligence - A Canadian Perspective"] = "A better professor"
+
+    print("\n**** Modified teachers:\n")
     for item in courses:
         print("Course name: ", item)
         print("Course teacher: ", courses[item])
@@ -94,4 +148,5 @@ practice_3_6()
 practice_3_7()
 practice_3_8()
 practice_3_9()
+practice_3_10()
 practice_dictionaries()
