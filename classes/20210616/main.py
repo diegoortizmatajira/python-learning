@@ -143,6 +143,7 @@ def practice_dictionaries():
         print("- - - - -")
 
 
+practice_3_4()
 practice_3_5()
 practice_3_6()
 practice_3_7()
