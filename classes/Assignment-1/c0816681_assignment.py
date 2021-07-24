@@ -27,7 +27,7 @@ def test_caesar_cypher(text, expected, delta):
 
 def part_1():
     print(
-        '*************************************************\n Part 1 \n*************************************************')
+            '*************************************************\n Part 1 \n*************************************************')
     text = 'THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG'
     expected = 'QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD'
     delta = 3
@@ -57,7 +57,7 @@ def binary_search(sorted_list, value):
 
 def part_2():
     print(
-        '*************************************************\n Part 2 \n*************************************************')
+            '*************************************************\n Part 2 \n*************************************************')
     primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
     print("Full list of prime numbers: ", primes)
     for item in [2, 97, 25, 5]:
@@ -86,7 +86,7 @@ def estimate_pi():
 
 def part_3():
     print(
-        '*************************************************\n Part 3 \n*************************************************')
+            '*************************************************\n Part 3 \n*************************************************')
     reverse_of_pi = estimate_pi()
     print(f"The result of the calculation is: {reverse_of_pi}")
     print(f"Therefore the estimation of Pi is: {1 / reverse_of_pi}")
