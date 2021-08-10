@@ -1,0 +1,7 @@
+In Python you can use primitive types
+In Python you can use lists and dictionaries
+In Python you can use control structures
+In Python you can format text
+In Python you can use object-oriented programming
+In Python you can read and write files
+In Python you can learn more about data science
